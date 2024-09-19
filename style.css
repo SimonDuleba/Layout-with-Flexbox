@@ -98,19 +98,22 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
-#featured-tea p {
+#featured-tea h4 {
     font-size: 18px;
-    line-height: 1.6;
     margin-bottom: 30px;
 }
 
 .tea-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
 }
 
 .tea-item {
+    flex: 1 1 30%; /* Adjust to fit 3 items in a row */
+    max-width: 30%; /* Ensures 3 items in a row */
+    box-sizing: border-box;
     text-align: center;
 }
 
@@ -121,10 +124,12 @@ nav a:hover {
 }
 
 @media (max-width: 768px) {
-    .tea-gallery {
-        grid-template-columns: 1fr;
+    .tea-item {
+        flex: 1 1 100%; /* Stack items in a single column on smaller screens */
+        max-width: 100%;
     }
 }
+
 
 /* Location Section */
 #location {
