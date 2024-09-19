@@ -1,0 +1,183 @@
+/* General Styles */
+body, header, footer, nav, .hero, #featured-tea, #location {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    color: seashell;
+    background-color: black;
+    opacity: 0.9;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 69px;
+    z-index: 1000;
+    background-color: black;
+    padding: 0 10px; /* Padding to match height and left margin */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img {
+    height: 50px;
+    margin-left: 10px;
+}
+
+nav {
+    margin-left: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+}
+
+nav a {
+    color: seashell;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background-color: black;
+    position: relative;
+    background-image: url('images/img-mission-background.webp'); /* Update this path */
+    background-size: cover; /* Use cover to ensure the image covers the section */
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: seashell;
+    text-align: center;
+    margin-top: 69px; /* Ensure content is pushed below the fixed header */
+}
+
+.hero h2, .hero h4 {
+    margin: 10px 0;
+}
+
+/* Featured Tea Section */
+#featured-tea {
+    padding: 40px 20px;
+    background-color: black;
+    color: seashell;
+    font-size: 22px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 8px;
+}
+
+#featured-tea h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#featured-tea p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.tea-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.tea-item {
+    text-align: center;
+}
+
+.tea-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .tea-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Location Section */
+#location {
+    padding: 40px 20px;
+    color: seashell;
+    text-align: center;
+    background-image: url('images/img-locations-background.webp'); /* Update this path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#location h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.location-blocks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.location-item {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.location-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.location-item p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Adjust body padding to account for fixed header */
+body {
+    padding-top: 69px; /* Adjust according to header height */
+}
+
+/* Footer Styling */
+footer {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: black;
+    color: seashell;
+    font-size: 16px;
+}
