@@ -13,7 +13,7 @@ body, header, footer, nav, .hero, #featured-tea, #location {
 /* Header Styles */
 header {
     position: fixed;
-    width: 100%;
+    width: calc(100% - 20px);
     top: 0;
     height: 69px;
     z-index: 1000;
@@ -22,6 +22,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid seashell;
+    text-decoration: underline;
 }
 
 header img {
@@ -63,7 +65,7 @@ nav a:hover {
     background-color: black;
     position: relative;
     background-image: url('images/img-mission-background.webp'); /* Update this path */
-    background-size: cover; /* Use cover to ensure the image covers the section */
+    background-size: 1200px 700px;
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
@@ -80,26 +82,44 @@ nav a:hover {
 .hero h2, .hero h4 {
     margin: 10px 0;
 }
+.hero-content {
+    position: absolute; /* Absolute positioning within .hero */
+    top: 50%; /* Center vertically */
+    left: 0; /* Align to the left edge */
+    right: 0; /* Align to the right edge */
+    transform: translateY(-50%); /* Offset by half of its own height */
+    background-color: black; /* Solid black background */
+    padding: 20px; /* Add padding around the text */
+    text-align: center; /* Center the text */
+    color: seashell; /* Text color */
+}
+
+/* Ensure text inside .hero-content is centered */
+.hero-content h2, .hero-content h4 {
+    margin: 10px 0; /* Margin for spacing */
+}
 
 /* Featured Tea Section */
 #featured-tea {
-    padding: 40px 20px;
+    padding: 20px 10px;
     background-color: black;
     color: seashell;
-    font-size: 22px;
     text-align: center;
-    margin: 20px auto;
-    max-width: 1200px;
+    margin: 10px auto;
+    width: 1000px;
     border-radius: 8px;
 }
 
 #featured-tea h2 {
-    font-size: 28px;
     margin-bottom: 20px;
 }
 
 #featured-tea h4 {
-    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+#featured-tea p {
+    font-family: Helvetica;
     margin-bottom: 30px;
 }
 
@@ -118,8 +138,8 @@ nav a:hover {
 }
 
 .tea-item img {
-    max-width: 100%;
-    height: auto;
+    width: 300px;
+    height: 200px;
     border-radius: 8px;
 }
 
@@ -137,7 +157,7 @@ nav a:hover {
     color: seashell;
     text-align: center;
     background-image: url('images/img-locations-background.webp'); /* Update this path */
-    background-size: cover;
+    background-size: 1200px 500px;
     background-position: center;
     background-repeat: no-repeat;
     margin: 20px auto;
@@ -154,7 +174,7 @@ nav a:hover {
 .location-blocks {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 40px;
     justify-content: center;
 }
 
@@ -162,9 +182,12 @@ nav a:hover {
     flex: 1 1 30%; /* Adjust to fit 3 items in a row */
     max-width: 30%; /* Ensures 3 items in a row */
     box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: black;
     padding: 20px;
+    height: auto;
+    width: 300px;
     border-radius: 8px;
+    opacity: 1;
 }
 
 .location-item h3 {
@@ -196,5 +219,10 @@ footer {
     padding: 20px;
     background-color: black;
     color: seashell;
-    font-size: 16px;
+    font-size: 22px;
+}
+footer p {
+    text-align: left;
+    font-family: Helvetica;
+    font-size: 22px;
 }
